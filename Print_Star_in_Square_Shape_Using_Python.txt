@@ -1,0 +1,18 @@
+
+def Print_Star_In_Square_Shape( row, column ):
+    for x in range( 0, row ):
+        for y in range(0, column ):
+            if (x == 0 ) or (x == (row -1)):
+                print('* ',end=' ')
+            elif (y > 0) and (y < column -1):
+                print('  ',end=' ')
+            else:
+                print('* ',end=' ')
+        print('\n')
+def main():
+    row = int(input("Enter Row size"))
+    column = int(input("Enter Column size"))
+    Print_Star_In_Square_Shape( row, column )
+
+if __name__=="__main__":
+    main() 

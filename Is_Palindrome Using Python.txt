@@ -1,0 +1,27 @@
+import sys
+
+def Is_palindrome( arg ):
+    Reverse_No = 0
+    Number = arg
+    if ( arg >= 0):
+        while arg > 0:
+            Reminder = arg % 10
+            Reverse_No = ( (Reverse_No * 10) + Reminder )
+            arg = arg // 10
+        if Reverse_No == Number:
+            print("this is palindrome number")
+        else:
+            print("this is not a palindrome number")
+    else:
+        print("Invalid number")    
+
+def main():
+    while True:
+        try:
+            Number = int(input("Enter a number"))
+            Is_palindrome( Number )
+        except ValueError:
+            print("Invalid number Please try again")
+
+if __name__=="__main__":
+    main()
